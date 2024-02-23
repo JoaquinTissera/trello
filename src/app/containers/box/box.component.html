@@ -1,0 +1,9 @@
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+  <h3>State Name</h3>
+  <ul>
+    @for (note of notes; track note.id) {
+      <app-component-note [note]="note" cdkDrag></app-component-note>
+
+    }
+  </ul>
+</div>
